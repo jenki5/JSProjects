@@ -1,0 +1,191 @@
+:root{
+    --page-1-color: steelblue;
+    --page-2-color: tan;
+    --page-3-color: teal;
+    --page-4-color: slateblue;
+    --animate-speed: 5s;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#page-1{
+    background: var(--page-1-color);
+}
+#page-2{
+    background: var(--page-2-color);
+}
+#page-3{
+    background: var(--page-3-color);
+}
+#page-4{
+    background: var(--page-4-color);
+}
+
+.page{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 4rem;
+}
+
+.page h1{
+    font-size: 4rem;
+    line-height: 1.2;
+    margin: 1rem;
+}
+
+.page p{
+    font-size: 1.3rem;
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #f4f4f4;
+    color: #333;
+    text-decoration: none;
+    border: none;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in;
+}
+
+.btn:hover,
+.btn-dark{
+    background: #333;
+    color: #fff;
+}
+
+.btn-dark:hover{
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* page Animation */
+#page-1 h1{
+    transform: translateY(-200px);
+    animation: heading var(--animate-speed) forwards ease-in;
+}
+
+#page-1 p{
+    transform: translateX(-3000px);
+    animation: text var(--animate-speed) forwards ease-in;
+}
+
+#page-1 .btn{
+    transform: translateX(3000px) rotate(2000deg);
+    animation: btn var(--animate-speed) forwards ease-in;
+}
+
+
+
+/* Keyframes */
+
+@keyframes heading{
+    5%{
+        color: green;
+        text-shadow: 10px 10px 5px #fff;
+    }
+    10%{
+        color: yellow;
+        text-shadow: 10px 10px 5px green;
+    }
+    15%{
+        color: violet;
+        text-shadow: 10px 10px 5px yellow;
+    }
+    20%{
+        color: rebeccapurple;
+        text-shadow: 10px 10px 5px violet;
+    }
+    25%{
+        color: red;
+        text-shadow: 10px 10px 5px rebeccapurple;
+    }
+    30%{
+        color: orange;
+        text-shadow: 10px 10px 5px red;
+    }
+    35%{
+        color: green;
+        text-shadow: 10px 10px 5px orange;
+    }
+    40%{
+        color: yellow;
+        text-shadow: 10px 10px 5px green;
+    }
+    45%{
+        color: violet;
+        text-shadow: 10px 10px 5px yellow;
+    }
+    50%{
+        color: rebeccapurple;
+        text-shadow: 10px 10px 5px violet;
+    }
+    55%{
+        color: red;
+        text-shadow: 10px 10px 5px rebeccapurple;
+    }
+    60%{
+        color: orange;
+        text-shadow: 10px 10px 5px red;
+    }
+    65%{
+        color: green;
+        text-shadow: 10px 10px 5px orange;
+    }
+    70%{
+        color: yellow;
+        text-shadow: 10px 10px 5px green;
+    }
+    75%{
+        color: violet;
+        text-shadow: 10px 10px 5px yellow;
+    }
+    80%{
+        color: rebeccapurple;
+        text-shadow: 10px 10px 5px violet;
+    }
+    85%{
+        color: red;
+        text-shadow: 10px 10px 5px rebeccapurple;
+    }
+    90%{
+        color: orange;
+        text-shadow: 10px 10px 5px red;
+    }
+    95%{
+        color: green;
+        text-shadow: 10px 10px 5px orange;
+    }
+    100%{
+        color: #fff;
+        text-shadow: 10px 10px 5px green;
+    }
+    to{
+        transform: translateY(0px);
+        text-shadow: none;
+    }
+}
+
+@keyframes text{
+    to{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes btn{
+    to{
+        transform: translateX(0px) rotate(0deg);
+    }
+}
